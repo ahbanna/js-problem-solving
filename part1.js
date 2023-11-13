@@ -38,3 +38,25 @@ console.log(`Original array: ${students}`);
 console.log(`Sorted array: ${sortedStudents}`);
 console.log("Original array:", students);
 console.log("Sorted array:", sortedStudents);
+
+// Problem: 5 (How to get the lowest to highest number from an array)
+const numbers = [5, 8, 6, 42, 89, 2, 38];
+console.log(
+  numbers.sort(function (a, b) {
+    return a - b;
+  })
+);
+
+// Problem: 6 (Make a number Negative or Positive)
+const makeNegative = (num) => (num > 0 ? -num : num);
+console.log(makeNegative(5));
+
+const makePositive = (num) => (num < 0 ? -num : num);
+console.log(makePositive(0));
+
+// Problem: 7 (Find leap year)
+const findLeapYear = (year) =>
+  (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
+    ? `${year} is leap year`
+    : `${year} is not a leap year`;
+console.log(findLeapYear(2024));
